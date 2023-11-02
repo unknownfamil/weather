@@ -1,38 +1,64 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  background: url('../public/dd29mju-3c5c2c16-5733-4155-9c32-0f6f2b92f864.gif') no-repeat center/cover;
+  background-attachment: fixed;
 }
-
-.App-link {
-  color: #61dafb;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather{
+  color: chocolate;
+}
+.massage{
+  font-weight: 100;
+  color: #ffffff;
+}
+.input{
+  padding: 8px 0 8px 5px;
+  outline-color: chocolate;
+  border: 1px solid chocolate;
+  caret-color: chocolate;
+  color: #ffffff;
+  background: 0;
+}
+::-webkit-input-placeholder{
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+.button{
+  padding: 8px 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid chocolate;
+  color: #ffffff;
+  background: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+.button:active{
+  transform: scale(0.90);
+}
+table{
+  margin-top: 30px;
+  border-collapse: collapse;
+  border-color: chocolate;
+  
+}
+table th{
+  font-weight: 100;
+  text-align: left;
+  padding: 8px;
+  color: #ffffff;
+}
+table td{
+  text-align: center;
+  color: #ffffff;
 }
