@@ -11,7 +11,7 @@ function App() {
 
   const getWeather = () => {
     if (!name) {
-      setError('Please enter the name of the area or city where you live.');
+      setError('Сураныч, сиз жашаган аймактын же шаардын атын киргизиңиз.');
       return;
     }
 
@@ -21,16 +21,16 @@ function App() {
         setError(null);
       })
       .catch((error) => {
-        setError('City not found. Please enter a valid city name.');
+        setError('Шаар табылган жок. Жарактуу шаардын атын киргизиңиз.');
         setWeather({});
       });
   }
 
   return (
     <div className="App">
-      <h1 className='weather'>The weather ⛅</h1>
-      <input className='input' onChange={(e) => setName(e.target.value)} placeholder='Write the city' type="text" />
-      <button className='button' onClick={getWeather}>To know</button>
+      <h1 className='weather'>Аба-ырайы ⛅</h1>
+      <input className='input' onChange={(e) => setName(e.target.value)} placeholder='Издөө' type="text" />
+      <button className='button' onClick={getWeather}>Билүү</button>
       <div className="content">
         {error ? (
           <h3 className='message'>{error}</h3>
@@ -38,24 +38,24 @@ function App() {
           <center>
             <table border="1">
               <tr>
-                <th>Country</th>
+                <th>Өлкө</th>
                 <td>{weather.sys.country}</td>
               </tr>
               <tr>
-                <th>Name</th>
+                <th>Аты</th>
                 <td>{weather.name}</td>
               </tr>
               <tr>
-                <th>Temp</th>
+                <th>Температура</th>
                 <td>{(weather.main.temp - 273.15).toFixed(0)}°C</td>
               </tr>
               <tr>
-                <th>Wind speed</th>
+                <th>Шамалдын ылдамдыгы</th>
                 <td>{weather.wind.speed}</td>
               </tr>
               <tr>
-                <th>Description</th>
-                <td>{weather.description}clear sky</td>
+                <th>Сүрөттөмө</th>
+                <td>{weather.description}Ачык асман</td>
               </tr>
             </table>
           </center>
